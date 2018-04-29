@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_management.Receptionist.reception_main">
+   <top>
+      <Label text="Receptionist Menu" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button layoutX="34.0" layoutY="30.0" mnemonicParsing="false" onAction="#confirm_checkIn" text="Confirm Check-In" />
+                  <Button layoutX="29.0" layoutY="87.0" mnemonicParsing="false" onAction="#confirm_checkOut" text="Confirm Check-Out" />
+                  <Button layoutX="48.0" layoutY="161.0" mnemonicParsing="false" onAction="#view_guests" text="View Guests" />
+                  <Button layoutX="39.0" layoutY="214.0" mnemonicParsing="false" onAction="#view_feedback" text="View Feedbacks" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_management.view.view_guests">
+   <top>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Hotel Guests">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="close" mnemonicParsing="false" onAction="#close" onDragDetected="#close" text="Close" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="currGuests" layoutX="175.0" layoutY="22.0" mnemonicParsing="false" onAction="#guestShow" selected="true" text="Current Guests">
+               <toggleGroup>
+                  <ToggleGroup fx:id="guestType" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="allGuests" layoutX="337.0" layoutY="22.0" mnemonicParsing="false" onAction="#guestShow" selected="true" text="All Guests" toggleGroup="$guestType" />
+            <Separator layoutX="162.0" layoutY="51.0" prefHeight="3.0" prefWidth="273.0" />
+            <ListView fx:id="guestView" layoutX="114.0" layoutY="64.0" prefHeight="200.0" prefWidth="417.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
